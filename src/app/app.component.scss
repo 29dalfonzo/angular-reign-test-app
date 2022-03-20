@@ -12,15 +12,14 @@
     ". . Pages . .";
 }
 
-.Header { grid-area: Header; background: red; }
 
-.Tabs { grid-area: Tabs; background: blue;}
+.Tabs { grid-area: Tabs}
 
-.Select { grid-area: Select; background: yellow;}
+.Select { grid-area: Select}
 
-.List { grid-area: List; background: green;}
+.List { grid-area: List}
 
-.Pages { grid-area: Pages; background: purple;}
+.Pages { grid-area: Pages}
 
 .body-container {
   display: grid;
