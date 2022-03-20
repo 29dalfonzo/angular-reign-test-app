@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent implements OnInit {
+	selectedTab=true
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+	changeTab(tab:boolean):void{
+		this.selectedTab=tab
+	}
 
 }

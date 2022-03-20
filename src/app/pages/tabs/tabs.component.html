@@ -1,1 +1,10 @@
-<p>tabs works!</p>
+    <div class="tabContainer">
+      <div class="container">
+				<div (click)="changeTab(true)" [ngClass]="selectedTab ? 'selected' : ''" class="rectangle">
+          All
+        </div>
+        <div (click)="changeTab(false)" [ngClass]="!selectedTab ? 'selected' : ''" class="rectangle">
+          My Faves
+        </div>
+      </div>
+    </div>
