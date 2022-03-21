@@ -27,18 +27,32 @@ export class ListComponent implements OnInit,OnChanges {
 
 	ngOnChanges(changes: SimpleChanges) {
 		if (this.areFavs){
-			let savedData = localStorage.getItem('favs')
-			if(savedData){
-				this.data = JSON.parse(savedData)
-			}else{
-				this.data = []
-			}
+			this.setFavs()
 		} else {
 		this.getDatafromApi()
 		}
 		console.log(changes)
 
   }
+
+	setFavs():void{
+		  //check if typeof areFavs is number
+		let data:any = localStorage.getItem('favs')
+		if(data){
+		let savedData = JSON.parse(data)
+			console.log('savedData',savedData)
+	  if(typeof this.check === 'number'){
+				console.log(this.check,((this.check-1)*8))
+			  this.data = savedData.splice(((this.check-1)*8),8)
+			  console.log('this.data',this.data)
+		  }else{
+					this.data = savedData.slice(0,8)
+			}
+		}else{
+			console.log('no data')
+			this.data = []
+		}
+	}
 
  getDatafromApi(){
 		this.dataService.getData().then((data:any)=>{
