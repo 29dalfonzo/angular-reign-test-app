@@ -1,0 +1,12 @@
+			<div class="card-container">
+				<div class="card-time-detail" (click)="openinNewTab(data.story_url)">
+					<img src="assets/icon-time-.svg" alt=""/>
+				<span>created {{getTimeDiff(data.created_at)}} by {{data.author}}</span>
+				</div>
+				<div class='card-detail' (click)="openinNewTab(data.story_url)">
+					{{data.story_title}}
+				</div>
+				<div class='card-fav'>
+					<img [src]="fav?heartFull:heart" alt="fav-icon" (click)="saveFav()"/>
+				</div>
+			</div>

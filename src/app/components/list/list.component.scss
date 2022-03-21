@@ -1,0 +1,37 @@
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 25px;
+  grid-row-gap: 15px;
+}
+
+.card-container {
+  /* width: 550px; */
+  height: 90px;
+  opacity: 0.8;
+  border-radius: 6px;
+  border: solid 1px #979797;
+  background-color: #fff;
+  display: grid;
+}
+
+/*media query under 1000px*/
+
+@media screen and (max-width: 1000px) {
+  .card-detail {
+    width: 200px;
+  }
+  .card-time-detail span {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-list {
+    display: block;
+  }
+  .card-container {
+    margin-bottom: 5px;
+  }
+}

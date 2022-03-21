@@ -22,12 +22,22 @@ export class SelectComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+		this.checkselect();
   }
 
   selectDropdown(option:Option){
+		//save selected option in local storage
+		localStorage.setItem('selected', JSON.stringify(option));
     this.selectedDropdown=option;
     this.show=false;
   }
+
+	checkselect(){
+		let selected=localStorage.getItem('selected');
+		if(selected){
+			this.selectedDropdown=JSON.parse(selected);
+		}
+	}
 
 }
 

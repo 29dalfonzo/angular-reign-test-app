@@ -1,0 +1,48 @@
+.card-container {
+  /* width: 550px; */
+  height: 90px;
+  opacity: 0.8;
+  border-radius: 6px;
+  border: solid 1px #979797;
+  background-color: #fff;
+  display: grid;
+}
+.card-time-detail {
+  grid-area: 1 / 1 / 2 / 3;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.card-time-detail img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+.card-time-detail span {
+  font-size: 11px;
+  color: #767676;
+  width: 350px;
+}
+
+.card-detail {
+  grid-area: 2 / 1 / 3 / 3;
+  margin-left: 10px;
+  color: #6b6b6b;
+  font-size: 14px;
+  width: 375px;
+}
+
+.card-fav {
+  grid-area: 1 / 3 / 3 / 4;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+}
+
+.card-fav img {
+  width: 25px;
+  cursor: pointer;
+}

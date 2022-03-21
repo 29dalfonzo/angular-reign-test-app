@@ -7,6 +7,7 @@ import { TabsComponent } from './components/tabs/tabs.component';
 import { SelectComponent } from './components/select/select.component';
 import { ListComponent } from './components/list/list.component';
 import { PagesComponent } from './components/pages/pages.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { PagesComponent } from './components/pages/pages.component';
     SelectComponent,
     ListComponent,
     PagesComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule
