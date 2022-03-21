@@ -1,0 +1,21 @@
+
+.Buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  margin: 0 0 0 8px;
+  border-radius: 6px;
+  border: solid 1px #d9d9d9;
+  background-color: #fff;
+}
+
+.selected {
+  border: solid 1px #1890ff;
+  background-color: #1890ff;
+  color: #fff;
+}

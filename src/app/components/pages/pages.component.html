@@ -1,1 +1,14 @@
-<p>pages works!</p>
+
+      <div class="Buttons">
+        <button class="btn" (click)="changePage(currentPage-1)">
+					<
+        </button>
+					<ng-container *ngFor="let page of pages; let i = index">
+						<button class="btn" [ngClass]="{'selected': page == currentPage}" (click)="changePage(page)">
+							{{page}}
+						</button>
+					</ng-container>
+        <button class="btn" (click)="changePage(currentPage+1)">
+					>
+        </button>
+      </div>
