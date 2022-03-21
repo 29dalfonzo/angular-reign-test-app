@@ -1,6 +1,28 @@
 # AngularReignTestApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
+An small app to show data from API (https://hn.algolia.com/api) .
+
+## Description
+
+This is a simple and small responsive app to show data from the [Hackers News public API] (https://hn.algolia.com/api), also you can select wich news you want to search (Angular, React or Vue) and save it as Fav so you will be able to see it in tab “My Faves” .
+
+## Getting Started
+
+This project was generated with Angular CLI version 13.3.0.
+
+### Dependencies
+
+* Angular CLI
+
+### Installing
+
+* Download or clone this repo.
+```
+cd angular-reign-test-app
+npm install
+```
+
+### Executing program
 
 ## Development server
 
@@ -10,18 +32,16 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Authors
 
-## Running unit tests
+Contributors names and contact info
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Daniel Alfonzo 
+[29dalfonzo](https://29dalfonzo.netlify.app/)
 
-## Running end-to-end tests
+## Version History
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+* 0.1
+    * Initial Release
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
