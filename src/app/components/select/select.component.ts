@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-select',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./select.component.scss']
 })
 export class SelectComponent implements OnInit {
+	@Output() newSelectedEvent = new EventEmitter<string>();
 	show: boolean = false;
 	options:Option[]=[
 		{name:'Angular', value:'angular', img:'assets/angularIcon.png'},
@@ -29,6 +30,7 @@ export class SelectComponent implements OnInit {
 		//save selected option in local storage
 		localStorage.setItem('selected', JSON.stringify(option));
     this.selectedDropdown=option;
+		this.newSelectedEvent.emit(option.value);
     this.show=false;
   }
 

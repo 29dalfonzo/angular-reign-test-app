@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+	api:"https://hn.algolia.com/api/v1/search_by_date?query="
 };
 
 /*

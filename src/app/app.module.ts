@@ -8,6 +8,8 @@ import { SelectComponent } from './components/select/select.component';
 import { ListComponent } from './components/list/list.component';
 import { PagesComponent } from './components/pages/pages.component';
 import { CardComponent } from './components/card/card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PagesService } from './Services/pages.service';
 
 @NgModule({
   declarations: [
@@ -20,9 +22,10 @@ import { CardComponent } from './components/card/card.component';
     CardComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+		HttpClientModule,
   ],
-  providers: [],
+  providers: [PagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

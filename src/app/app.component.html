@@ -7,10 +7,10 @@
     <app-tabs></app-tabs>
   </div>
   <div class="Select">
-    <app-select></app-select>
+    <app-select (newSelectedEvent)="getNewSelected($event)"></app-select>
   </div>
   <div class="List">
-    <app-list></app-list>
+		<app-list [check]="check"></app-list>
   </div>
   <div class="Pages">
     <app-pages></app-pages>

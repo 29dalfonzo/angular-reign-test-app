@@ -14,7 +14,7 @@ export class PagesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-	changePage(page:number){
+	changePage(page:number):void{
 		//validate page if <1
 		if (page==0) return
     if (page > this.pages[this.pages.length - 1]) {
@@ -30,7 +30,7 @@ export class PagesComponent implements OnInit {
 		this.currentPage=page
 	}
 
-   remakePages(i: number, more: boolean) {
+   remakePages(i: number, more: boolean):void{
 		let newButton:number[] =[]
     // take out the second element an add a new one (i+1) in button.length-2
     if (more) {
