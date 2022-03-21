@@ -41,8 +41,6 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Authors
 
-Contributors names and contact info
-
 Daniel Alfonzo 
 [29dalfonzo](https://29dalfonzo.netlify.app/)
 
