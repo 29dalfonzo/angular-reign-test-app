@@ -1,10 +1,16 @@
 # AngularReignTestApp
 
-An small app to show data from API (https://hn.algolia.com/api) .
+An small app to show data from API (https://hn.algolia.com/api). You can also see the react version [here](https://github.com/29dalfonzo/react-reign-test-app/)
 
 ## Description
 
-This is a simple and small responsive app to show data from the [Hackers News public API] (https://hn.algolia.com/api), also you can select wich news you want to search (Angular, React or Vue) and save it as Fav so you will be able to see it in tab “My Faves” .
+This is a simple and small responsive app to show data from the [Hackers News public API](https://hn.algolia.com/api), also you can select wich news you want to search (Angular, React or Vue) and save it as Fav so you will be able to see it in tab “My Faves” .
+
+## Demo
+
+You can see the live demo here:
+* [Angular Version](https://29dalfonzo-hackernews-a.netlify.app/)
+* [React Version](https://29dalfonzo-hackernews.netlify.app/)
 
 ## Getting Started
 
