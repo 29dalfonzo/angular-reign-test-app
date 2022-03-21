@@ -8,18 +8,35 @@ import { PagesService } from 'src/app/Services/pages.service';
 })
 export class ListComponent implements OnInit,OnChanges {
 	@Input() check:string = ``
+	@Input() areFavs:boolean = false
 
- url=`https://hn.algolia.com/api/v1/search_by_date?query=&hitsPerPage=10&page=1`
 	data:any[] = []
   constructor(private readonly dataService:PagesService) { }
 
   ngOnInit(): void {
+		if (this.areFavs){
+			let savedData = localStorage.getItem('favs')
+			if(savedData){
+				this.data = JSON.parse(savedData)
+			}
+			
+		} else {
 		this.getDatafromApi()
+		}
 	}
 
 	ngOnChanges(changes: SimpleChanges) {
-		// console.log(changes)
+		if (this.areFavs){
+			let savedData = localStorage.getItem('favs')
+			if(savedData){
+				this.data = JSON.parse(savedData)
+			}else{
+				this.data = []
+			}
+		} else {
 		this.getDatafromApi()
+		}
+		console.log(changes)
 
   }
 
@@ -42,8 +59,6 @@ filterData(data:any):void{
 	}else{
 		this.data = filteredData.slice(0,8)
 	}
-
-
 }
 	
 }

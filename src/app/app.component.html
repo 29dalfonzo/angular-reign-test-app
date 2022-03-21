@@ -4,13 +4,13 @@
     <app-header></app-header>
   </div>
   <div class="Tabs">
-    <app-tabs></app-tabs>
+    <app-tabs (newSelectedTab)="getshowFavs($event)"></app-tabs>
   </div>
   <div class="Select">
-    <app-select (newSelectedEvent)="getNewSelected($event)"></app-select>
+    <app-select *ngIf="!areFavs" (newSelectedEvent)="getNewSelected($event)"></app-select>
   </div>
   <div class="List">
-		<app-list [check]="checkUrl"></app-list>
+		<app-list [areFavs]="areFavs" [check]="checkUrl"></app-list>
   </div>
   <div class="Pages">
     <app-pages (newSelectedPage)="getNewPages($event)"></app-pages>

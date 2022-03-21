@@ -9,8 +9,7 @@ import { PagesService } from './Services/pages.service';
 export class AppComponent {
   title:string = 'angular-reign-test-app';
 	checkUrl:string='';
-	currentPage:number=1;
-
+  areFavs=false;
 	constructor(private readonly _dataService: PagesService) {
 	}
 
@@ -24,5 +23,9 @@ export class AppComponent {
 		 console.log(event);
 	  this._dataService.updateUrl('',event)
 		this.checkUrl=event
+	}
+
+	getshowFavs(event:any):void {
+		this.areFavs=event
 	}
 }

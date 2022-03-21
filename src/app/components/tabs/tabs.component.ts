@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tabs',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tabs.component.scss']
 })
 export class TabsComponent implements OnInit {
-	selectedTab=true
+	@Output() newSelectedTab = new EventEmitter<boolean>();
+
+	selectedTab=false
 
   constructor() { }
 
@@ -15,6 +17,7 @@ export class TabsComponent implements OnInit {
 
 	changeTab(tab:boolean):void{
 		this.selectedTab=tab
+		this.newSelectedTab.emit(tab)
 	}
 
 }
