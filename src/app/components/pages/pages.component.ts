@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-pages',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pages.component.scss']
 })
 export class PagesComponent implements OnInit {
+	@Output() newSelectedPage: EventEmitter<number> = new EventEmitter<number>();
 	pages=[1,2,3,4,5,6,7,8,9]
 	currentPage=1
 
@@ -28,6 +29,7 @@ export class PagesComponent implements OnInit {
       return;
     }
 		this.currentPage=page
+		this.newSelectedPage.emit(page)
 	}
 
    remakePages(i: number, more: boolean):void{
@@ -42,6 +44,7 @@ export class PagesComponent implements OnInit {
     }
 			this.pages=newButton
 			this.currentPage=i
+		 this.newSelectedPage.emit(i)
   };
 
 }

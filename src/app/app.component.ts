@@ -7,15 +7,22 @@ import { PagesService } from './Services/pages.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-reign-test-app';
-	check='';
+  title:string = 'angular-reign-test-app';
+	checkUrl:string='';
+	currentPage:number=1;
 
 	constructor(private readonly _dataService: PagesService) {
 	}
 
-	getNewSelected(event:string) {
+	getNewSelected(event:string):void {
 		// console.log(event);
 	  this._dataService.updateUrl(event)
-		this.check=event
+		this.checkUrl=event
+	}
+
+	getNewPages(event:any):void {
+		 console.log(event);
+	  this._dataService.updateUrl('',event)
+		this.checkUrl=event
 	}
 }

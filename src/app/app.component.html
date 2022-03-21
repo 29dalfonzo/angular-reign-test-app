@@ -10,9 +10,9 @@
     <app-select (newSelectedEvent)="getNewSelected($event)"></app-select>
   </div>
   <div class="List">
-		<app-list [check]="check"></app-list>
+		<app-list [check]="checkUrl"></app-list>
   </div>
   <div class="Pages">
-    <app-pages></app-pages>
+    <app-pages (newSelectedPage)="getNewPages($event)"></app-pages>
   </div>
 </div>
