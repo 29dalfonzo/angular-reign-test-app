@@ -1,1 +1,46 @@
-<p>select works!</p>
+  <div class="dropdown-container">
+    <div class="dropdown">
+		  <div class="dropbtn" (click)="show=!show">
+				<ng-container *ngIf="selectedDropdown.img">
+            <img
+              [src]="selectedDropdown.img"
+              [alt]="selectedDropdown.name"
+             width="20"
+              height="20"
+            />
+				</ng-container>
+        {{selectedDropdown.name}}
+          <img
+            class="icon-arrow"
+            src='assets/arrow.png'
+            alt="arrow"
+            width="10"
+            height="10"
+          />
+       </div>
+         <div
+          [ngClass]="show? 'showMenu':'' "  class="dropdown-content"
+          onmouseleave="this.classList.remove('showMenu')"
+        >
+        <ng-container *ngFor="let dropdown of options">
+          <div
+            (click)="selectDropdown(dropdown)"
+            [ngClass]="selectedDropdown.name === dropdown.name ? 'selected' : ''"
+            class="dropdown-item"
+          >
+            <ng-container *ngIf="dropdown.img">
+              <img
+                [src]="dropdown.img"
+                [alt]="dropdown.name"
+               width="20"
+                height="20"
+              />
+            </ng-container>
+            {{dropdown.name}}
+          </div>
+        </ng-container>
+      </div>
+
+
+    </div>
+  </div>
